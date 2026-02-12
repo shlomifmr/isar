@@ -22,7 +22,10 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 30
+    // Define the namespace required by AGP 8 for R/BuildConfig generation
+    namespace 'dev.isar.isar_flutter_libs'
+
+    compileSdkVersion 34
 
     defaultConfig {
         minSdkVersion 16
