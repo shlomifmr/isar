@@ -19,12 +19,18 @@ build/
 # Rust related
 target/
 *.a
-*.so
 *.dylib
 *.dll
 *.zip
 *.xcframework/
 isar-dart.h
+*.so
+
+# BUT allow built native libs in flutter plugin directories
+!packages/isar_flutter_libs/android/src/main/jniLibs/
+!packages/isar_flutter_libs/android/src/main/jniLibs/**/*.so
+!packages/isar_flutter_libs/ios/isar.xcframework/
+!packages/isar_flutter_libs/ios/isar.xcframework/**
 
 # Android related
 **/android/**/gradle-wrapper.jar
